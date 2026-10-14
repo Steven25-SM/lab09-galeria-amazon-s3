@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galería S3 | Laboratorio 09</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-top">
+  <span class="brand">S3 LAB</span>
+</div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">LABORATORIO 09 · CLOUD STORAGE</p>
+        <h1>Administra tus imágenes privadas.</h1>
+        <p class="lead">
+          Sube, visualiza y elimina fotografías almacenadas en Amazon S3
+          mediante URLs prefirmadas, sin exponer credenciales en el navegador.
+        </p>
+
+        <div class="hero-badges">
+          <span class="pill">Bucket privado</span>
+          <span class="pill">Presigned URLs</span>
+          <span class="pill">AWS SDK v3</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-top">
+        <div class="progress-line">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="step">04 / 06 · SUBIDA Y GESTIÓN</p>
+        <p class="substep">GALERÍA PRIVADA EN AMAZON S3</p>
+      </div>
+
+      <section class="uploader-card">
+        <h2>Sube tu imagen</h2>
+        <p class="card-text">
+          Solo se permiten archivos JPG, PNG y WEBP de menos de 5 MB.
+        </p>
+
+        <label for="file" id="dropzone" class="dropzone">
+          <span class="drop-icon">↑</span>
+          <strong>Arrastra una imagen aquí o haz clic para seleccionar</strong>
+          <small>JPG · PNG · WEBP · máximo 5 MB</small>
+          <input type="file" id="file" accept="image/jpeg,image/png,image/webp" />
+        </label>
+
+        <div class="actions">
+          <span id="selected">Ningún archivo seleccionado</span>
+          <button id="uploadBtn">SUBIR IMAGEN</button>
+        </div>
+
+        <p id="status" role="status"></p>
+      </section>
+    </section>
+  </main>
+
+  <section class="gallery-section">
+    <div class="gallery-header">
+      <div>
+        <p class="eyebrow">COLECCIÓN</p>
+        <h2>Mis imágenes</h2>
+      </div>
+
+      <button class="secondary" id="refresh">ACTUALIZAR</button>
+    </div>
+
+    <div id="gallery" class="gallery"></div>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>
